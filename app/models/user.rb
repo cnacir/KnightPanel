@@ -7,8 +7,8 @@ class User < ApplicationRecord
 	has_many :usercohorts
 	has_many :cohorts, through: :usercohorts
 
-	validates :age, numericality: {less_than: 150, message: "The system can't handle one that ancient. Be younger."}
-	validates :salary, numericality: { greater_than: 0, message: "Come on now, surely you must make more than that."}
+	validates :age, numericality: {less_than: 150}
+	validates :salary, numericality: {greater_than: 0}
 
 
 	def name

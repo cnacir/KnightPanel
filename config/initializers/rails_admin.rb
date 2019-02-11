@@ -13,7 +13,23 @@ RailsAdmin.config do |config|
 			field :updated_at
     end
   end
-
+config.model 'Cohort' do
+	list do
+		field :name
+		field :course
+		field :start_date
+		field :end_date
+		field :created_at
+		field :updated_at
+	end
+end
+config.model 'Course' do
+	list do
+		field :name
+		field :cohorts
+		field :class_hours
+	end
+end
 
   ### Popular gems integration
 

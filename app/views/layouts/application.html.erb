@@ -13,6 +13,30 @@
   </head>
 
   <body>
+	<header class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<p id="logo">Knight Academy</p>
+		<nav>
+		<ul class="nav nav-pills navbar-nav navbar-right">
+	<% if current_user %>
+  <li class="nav-item">
+		<%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Dashboard", rails_admin_path, class: "nav-link" %>
+  </li>
+	<% else %>
+  <li class="nav-item">
+    <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to 'Register', new_user_registration_path, class: "nav-link"  %>
+  </li>
+	<% end %>
+</ul>
+</nav>
+</div>
+</header>
 
 		<% unless flash.empty? %>
      	<script type="text/javascript">
@@ -22,24 +46,9 @@
 	   			<% end %>
      	</script>
 		<% end %>
-		
-		<% if current_user %>
-			<%= link_to "Logout", destroy_user_session_path, method: :delete %>
-			<%= link_to "Dashboard", rails_admin_path %>
-		<% else %>
-			<%= link_to "Login", new_user_session_path %>
-		<% end %>
-
-		<% if user_signed_in? %>
-
-  <%= link_to('Edit registration', edit_user_registration_path) %>
-
-	<% else %>
-
-  	<%= link_to('Register', new_user_registration_path)  %>
-
-	<% end %>
 
     <%= yield %>
+
+		<%= render 'layouts/footer' %>
   </body>
 </html>
