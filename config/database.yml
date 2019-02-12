@@ -81,5 +81,6 @@ development:
 production:
   <<: *default
   database: admin-panel_production
-  username: admin-panel
-  password: <%= ENV['ADMIN-PANEL_DATABASE_PASSWORD'] %>
+  username: postgres
+  password: <%= ENV["PSQL_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>

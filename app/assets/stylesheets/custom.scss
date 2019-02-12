@@ -80,16 +80,37 @@ footer ul li {
   margin-left: 15px;
 }
 
-#sign-up {
-	background: beige;
+#sign_up {
+	background: rgba(beige, 0.3);
+	padding:0.6em;
+	border-radius: 10px;
+	width: 19em;
 	color: black;
 	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	border: 2px double black;
+
+}
+
+#container_signup {
+	width: 161em;
+}
+
+#container_login {
+	width: 162.75em;
 }
 
 #log-in {
-	background: beige;
+	background: rgba(beige, 0.3);
 	color: black;
 	font-weight: bold;
+	padding:0.6em;
+	border-radius: 10px;
+	width: 19em;
+	display: flex;
+	justify-content: center;
+	border: 2px double black;
 }
 
 #card {
@@ -98,7 +119,7 @@ footer ul li {
 
 }
 .card-body {
-		background-color: beige;
+		background-color: rgba(beige, 0.3);
 		border-radius: 10px;
 }
 
@@ -106,8 +127,12 @@ footer ul li {
 	padding-right: 3em;
 	padding-left: 3em;
 	padding-top: 1em;
+	padding-bottom: 1em;
 	display: flex;
 	flex-direction: column;
+	align-content: center;
+	color: black;
+	border: 2px double black;
 
 }
 
