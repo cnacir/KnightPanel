@@ -7,6 +7,10 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 ENV['RAILS_ADMIN_THEME'] = 'material_theme'
 
+Raven.configure do |config|
+  config.dsn = ENV['SENTRY_DSN']
+end
+
 module AdminPanel
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.

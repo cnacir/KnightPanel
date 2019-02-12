@@ -7,6 +7,9 @@ class ApplicationController < ActionController::Base
     redirect_to main_app.root_path, flash: {error: "You are not authorized to access this page!"}
   end
 
+	def after_sign_in_path_for(resource)
+    rails_admin_path
+	end
 
   protected
     def configure_permitted_parameters
