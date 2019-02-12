@@ -9,27 +9,39 @@ User.create(
 	email: 'admin@admin.com',
 	password: 'admin1',
 	full_name: 'admin',
-	admin: true
+	admin: true,
+	age: 100,
+	salary: 100000,
+	education: 'Ph.D'
 )
 User.create(
 	email: 'student@admin.com',
 	password: 'student',
 	full_name: 'student',
-	student: true
+	student: true,
+	age: 12,
+	salary: 100,
+	education: 'High School'
 )
 User.create(
 	email: 'instructor@admin.com',
 	password: 'instructor',
 	full_name: 'instructor',
-	instructor: true
+	instructor: true,
+	age: 25,
+	salary: 10000,
+	education: 'Master\'s Degree'
 )
 
 Course.create(
-	name: 'Dragon Slaying 201'
+	name: 'Dragon Slaying 201',
+	class_hours: 200
 )
 Course.create(
-	name: 'Damsel Saving 305'
+	name: 'Damsel Saving 305',
+	class_hours: 200
 )
 Course.create(
-	name: 'Armor Polishing 100'
+	name: 'Armor Polishing 100',
+	class_hours: 200
 )
