@@ -80,7 +80,7 @@ development:
 #
 production:
   <<: *default
-  database: admin-panel_production
+  database: admin-panel_development
   username: postgres
   password: <%= ENV["PSQL_PASSWORD"] %>
   host: localhost
