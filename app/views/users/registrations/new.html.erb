@@ -1,63 +1,72 @@
-<h2>Sign up</h2>
+<div class="container">
+<h2 id="sign-up">Sign up</h2>
+</div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="row" id="card">
+<div class="card" style="width: 40rem;">
+  <div class="card-body">
+		<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+		  <%= render "devise/shared/error_messages", resource: resource %>
 
-	<div class="field">
-		<%= f.label :full_name %><br />
-		<%= f.text_field :full_name, autocomplete: "your-name" %>
-	</div><br />
+			<div class="field">
+				<%= f.label :full_name %><br />
+				<%= f.text_field :full_name, autocomplete: "your-name" %>
+			</div><br />
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+		  <div class="field">
+		    <%= f.label :email %><br />
+		    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+		  </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %><br />
+		  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+		    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+		  <% end %><br />
 
-  <div class="field">
-    <%= f.label :password %> <br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div><br />
+		  <div class="field">
+		    <%= f.label :password %> <br />
+		    <%= f.password_field :password, autocomplete: "new-password" %><br/>
+		    <% if @minimum_password_length %>
+		      <em><%= @minimum_password_length %> characters minimum</em>
+		    <% end %>
+		  </div><br />
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div><br />
+		  <div class="field">
+		    <%= f.label :password_confirmation %><br />
+		    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+		  </div><br />
 
-	<div class="field">
-		<%= f.label :age %><br />
-		<%= f.text_field :age, autocomplete: "age" %>
-	</div><br />
-
-
-	<div class="field">
-		<%= f.label :education %><br />
-		<%= f.select :education, ['High School', 'Bachelor\'s Degree', 'Master\'s Degree', 'Ph.D'] %>
-	</div><br />
-
-	<div class="field">
-		<%= f.label :salary %><br />
-		<%= f.text_field :salary %><br />
-	</div><br />
-
-	<div class="field">
-		<%= f.radio_button :instructor, true %>
-		<%= f.label :instructor, 'Instructor', :value => true %>
-		<%= f.radio_button :student, true %>
-		<%= f.label :student, 'Student', :value => true %>
-	</div><br />
+			<div class="field">
+				<%= f.label :age %><br />
+				<%= f.text_field :age, autocomplete: "age" %>
+			</div><br />
 
 
+			<div class="field">
+				<%= f.label :education %><br />
+				<%= f.select :education, ['High School', 'Bachelor\'s Degree', 'Master\'s Degree', 'Ph.D'] %>
+			</div><br />
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+			<div class="field">
+				<%= f.label :salary %><br />
+				<%= f.text_field :salary %><br />
+			</div><br />
+
+			<div class="field">
+				<%= f.radio_button :instructor, true %>
+				<%= f.label :instructor, 'Instructor', :value => true %>
+				<%= f.radio_button :student, true %>
+				<%= f.label :student, 'Student', :value => true %>
+			</div><br />
+
+		  <div class="actions" id="sign-up">
+		    <%= f.submit "Sign up", class: "btn btn-primary" %>
+		  </div><br />
+		<% end %>
+
+		<%= render "users/shared/links" %>
+<% if current_user %>
+<% redirect_to rails_admin_path %>
 <% end %>
-
-<%= render "users/shared/links" %>
+</div>
+</div>
+</div>

@@ -3,6 +3,7 @@
 
 body {
   padding-top: 5em;
+	background-color: #101D42;
 }
 
 section {
@@ -30,6 +31,7 @@ textarea {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+	text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -78,6 +80,50 @@ footer ul li {
   margin-left: 15px;
 }
 
-.form-group {
-	float:right;
+#sign-up {
+	background: beige;
+	color: black;
+	font-weight: bold;
+}
+
+#log-in {
+	background: beige;
+	color: black;
+	font-weight: bold;
+}
+
+#card {
+	display: flex;
+	justify-content: center;
+
+}
+.card-body {
+		background-color: beige;
+		border-radius: 10px;
+}
+
+.field {
+	padding-right: 3em;
+	padding-left: 3em;
+	padding-top: 1em;
+	display: flex;
+	flex-direction: column;
+
+}
+
+#login-action {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	bottom: 0.5em;
+}
+
+#password_forgot {
+	position: relative;
+	bottom: 0.75em;
+}
+
+#sign-up {
+	display: flex;
+	justify-content: center;
 }
