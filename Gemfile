@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'bootstrap-sass'
+gem "twitter-bootstrap-rails"
 gem 'devise-i18n'
 gem 'devise-bootstrap-views', '~> 1.0'
 
@@ -60,7 +60,7 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end
-gem 'rails_admin_material_theme', '~> 0.2.0'
+gem 'rails_admin_material_theme'
 gem 'devise'
 gem 'rails_admin'
 gem 'cancancan'

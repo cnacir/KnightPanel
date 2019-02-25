@@ -4,11 +4,11 @@ class ApplicationController < ActionController::Base
 
 	rescue_from CanCan::AccessDenied do |exception|
 
-    redirect_to main_app.root_path, flash: {error: "You are not authorized to access this page!"}
-  end
+		redirect_to main_app.root_path, flash: {error: "You are not authorized to access this page!"}
+	end
 
 	def after_sign_in_path_for(resource)
-    rails_admin_path
+		rails_admin_path
 	end
 
   protected
