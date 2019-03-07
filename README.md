@@ -2,7 +2,7 @@
 
 
 
-# ![KnightPanel](https://github.com/cnacir/EndingNote/blob/master/app/assets/images/KnightPanel.png)
+# ![KnightPanel](https://github.com/cnacir/KnightPanel/blob/master/app/assets/images/KnightPanel.png)
 # EndingNote
 <table>
 <tr>
